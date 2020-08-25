@@ -9,6 +9,7 @@ def index():
     if request.method == 'POST':
         return render_template("index.html")
 
+    return render_template("index.html")
 
 
 @app.route('/sentiment_home',methods = ['POST', 'GET'])
