@@ -1,0 +1,44 @@
+<html>
+
+    <head>
+        <title>Sentiment Analysis | Flask</title>
+    </head>
+
+    <body>
+        
+            <center><h2>sentiment output</h2></center>
+            <center><p>Output here: </p></center>
+
+            <center>
+                <table border="1">
+                    {% for key, value  in results.items() %}
+                        <tr>
+                            <th>{{key}}</th>
+                            <td> {{value}} </td>
+                        </tr>
+                    {% endfor %}
+
+                </table>
+           </center>
+
+
+            <center>
+                <form action = "http://localhost:5000/sentiment_home" method = "post">
+
+                    <p><input type = "submit" value = "Back to Sentiment Analysis" /></p>
+                 </form>
+            </center>
+
+
+            <br><br>
+            <center>
+                <form action = "http://localhost:5000/" method = "post">
+
+                    <p><input type = "submit" value = "Back to Home" /></p>
+                 </form>
+            </center>
+
+
+    </body>
+
+</html>
